@@ -1,0 +1,156 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section 
+{   
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section:hover
+{
+}
+
+section .imgbox 
+{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 15px;
+    background: url(img2.jpg) right;
+    background-size: cover;
+    transition: .3s ease;
+}
+
+section .imgbox::before 
+{
+    content: '';
+    position: absolute;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    bottom: 70px;
+    border-radius: 50%;
+    left: 0;  
+    box-shadow: -6px 6px 0 white;
+    z-index: 1;
+    border-top-right-radius: 10px;
+}
+section .imgbox::after 
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 white;
+    z-index: 1;
+}
+
+section .content 
+{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: rgb(0, 102, 255);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+}
+
+section .content .price 
+{
+    position: absolute;
+    top: -80px;
+    height: 80px;
+    width: 50%;
+    background: rgb(0, 102, 255);
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-top-right-radius: 25px;
+}
+section .content .price::before 
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    bottom: -1px;
+    right: -19px;
+    border-radius: 50%;
+    box-shadow: -5px 5px 0 rgb(0, 102, 255);
+    z-index: 1;
+}
+section .content .price::after 
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 102, 255);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -8px -9px 0 white;
+    z-index: 1;
+}
+
+section .content .price a
+{
+    position: relative;
+    bottom: -25px;
+    left: 15px;
+    color: dodgerblue;
+    font-size: 1.2rem;
+    background: rgb(255, 255, 255);
+    padding: .6rem .8rem;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+section .content .price a:hover
+{
+    color: white;
+    background:rgb(0, 102, 255);
+    border: 2px solid white;
+
+}
+
+.content .info ul 
+{
+    margin-top: 1.3rem;
+}
+.content .info ul li
+{
+    color: white;
+    margin: .8rem 1rem;
+    font-size: 1.4rem;
+}
+.content .info ul li:first-child
+{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+.content .info ul li:last-child
+{
+    font-size: 1rem;
+}
